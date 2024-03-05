@@ -10,6 +10,8 @@ void	*memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	d = (char *)dest;
 	s = (char *)src;
+	if (dest == src)
+		return (dest);
 	while (s[i] && i < n)
 	{
 		d[i] = s[i];
