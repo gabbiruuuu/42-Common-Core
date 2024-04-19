@@ -6,7 +6,7 @@
 #    By: analmeid <analmeid@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/10 14:45:10 by analmeid          #+#    #+#              #
-#    Updated: 2024/04/19 12:07:25 by analmeid         ###   ########.fr        #
+#    Updated: 2024/04/19 14:57:43 by analmeid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,14 +27,17 @@ files 	   = ft_atoi \
 			 ft_memset \
 			 ft_strchr \
 			 ft_strdup \
+			 ft_strjoin \
 			 ft_strlcat \
 			 ft_strlcpy \
 			 ft_strlen \
 			 ft_strncmp \
 			 ft_strnstr \
 			 ft_strrchr \
+			 ft_strtrim \
+			 ft_substr \
 			 ft_tolower \
-			 ft_toupper \
+			 ft_toupper
 
 Compiler	= cc
 
