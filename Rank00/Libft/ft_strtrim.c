@@ -6,7 +6,7 @@
 /*   By: analmeid <analmeid@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 14:53:23 by analmeid          #+#    #+#             */
-/*   Updated: 2024/04/19 14:55:07 by analmeid         ###   ########.fr       */
+/*   Updated: 2024/04/23 14:19:08 by analmeid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,26 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
+	size_t	i;
+	size_t	j;
+	char	*str;
+
+	i = 0;
+	j = ft_strlen(s1);
+	str = NULL;
+	if (s1[i] && set[i])
+	{
+		while (s1[i] && ft_strchr(set, s1[i]) != NULL)
+			i++;
+		while (j > i && s1[j - 1] && ft_strchr(set, s1[j - 1]) != NULL)
+			j--;
+		str = (char *)malloc(sizeof(char) * j - i + 1);
+		if (str == NULL)
+			return (NULL);
+		if (str)
+			ft_strlcpy(str, &s1[i], j - i + 1);
+	}
+	return (str);
 }
 
 /*
@@ -25,3 +45,10 @@ Return the trimmed string or NULL if the allocation fails.
 Allocates (with malloc(3)) and returns a copy of ’s1’ with the characters
  specified in ’set’ removed from the beginning and the end of the string.
 */
+
+/* int	main(void)
+{
+	char	s1[] = "lorem \n ipsum \t dolor \n sit \t amet";
+
+	printf("%s", ft_strtrim(s1, " "));
+} */

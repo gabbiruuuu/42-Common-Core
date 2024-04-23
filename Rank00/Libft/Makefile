@@ -6,7 +6,7 @@
 #    By: analmeid <analmeid@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/10 14:45:10 by analmeid          #+#    #+#              #
-#    Updated: 2024/04/19 14:57:43 by analmeid         ###   ########.fr        #
+#    Updated: 2024/04/23 11:51:03 by analmeid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ files 	   = ft_atoi \
 			 ft_memcpy \
 			 ft_memmove \
 			 ft_memset \
+			 ft_split \
 			 ft_strchr \
 			 ft_strdup \
 			 ft_strjoin \
