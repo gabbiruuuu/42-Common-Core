@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-/* #include <stdio.h> */
+#include <stdio.h>
 
 static int	ft_wordcount(const char *str, char c)
 {
@@ -90,8 +90,9 @@ static char	**ft_allocate_copy(const char *s, char c, int j)
 		start = end;
 		while (s[start] && s[start] == c)
 			start++;
+		i++;
 	}
-	str[i] = NULL;
+	str[i] = 0;
 	return (str);
 }
 
@@ -101,11 +102,11 @@ char	**ft_split(const char *s, char c)
 	int		j;
 	int		i;
 
-	i = 0;
 	if (s == NULL)
 		return (NULL);
 	j = ft_wordcount(s, c);
 	str = ft_allocate_copy(s, c, j);
+	i = 0;
 	while (i < j)
 	{
 		if (str[i] == NULL)
@@ -131,20 +132,21 @@ Allocates (with malloc(3)) and returns an array
 The array must end with a NULL pointer.
 */
 
-/* int	main(void)
+int	main(void)
 {
-	char	*s;
 	char	**dest;
+	char	*s;
 	int		i;
 
-	s = "lorem ipsum dolor sit amet, \
-		consectetur adipiscing elit. Sed non risus. Suspendisse";
+	s = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse";
 	dest = ft_split(s, ' ');
 	i = 0;
-	// printf("%d", ft_wordcount(s,' '));
+	printf("%d", ft_wordcount(s,' '));
 	while (dest[i])
 	{
 		printf("%s\n", dest[i]);
+		free(dest[i]);
 		i++;
 	}
-} */
+	free(dest);
+}
