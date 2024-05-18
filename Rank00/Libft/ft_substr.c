@@ -6,7 +6,7 @@
 /*   By: analmeid <analmeid@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 13:18:24 by analmeid          #+#    #+#             */
-/*   Updated: 2024/05/18 12:50:13 by analmeid         ###   ########.fr       */
+/*   Updated: 2024/05/18 15:20:14 by analmeid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	{
 		if (i >= start && j < len)
 		{
-			str[j] = (char)s[i];
-			j++;
+			str[j++] = (char)s[i];
 		}
 		i++;
 	}

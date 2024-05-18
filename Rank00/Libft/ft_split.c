@@ -6,12 +6,11 @@
 /*   By: analmeid <analmeid@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 15:10:26 by analmeid          #+#    #+#             */
-/*   Updated: 2024/05/18 11:09:37 by analmeid         ###   ########.fr       */
+/*   Updated: 2024/05/18 15:17:25 by analmeid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 #include <stdio.h>
 
 static int	ft_wordcount(const char *str, char c)
@@ -138,7 +137,8 @@ The array must end with a NULL pointer.
 	char	*s;
 	int		i;
 
-	s = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse";
+	s = "lorem ipsum dolor sit amet,
+		consectetur adipiscing elit. Sed non risus. Suspendisse";
 	dest = ft_split(s, ' ');
 	i = 0;
 	printf("%d", ft_wordcount(s,' '));

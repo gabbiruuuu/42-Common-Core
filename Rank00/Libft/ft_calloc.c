@@ -6,7 +6,7 @@
 /*   By: analmeid <analmeid@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 12:04:54 by analmeid          #+#    #+#             */
-/*   Updated: 2024/05/18 11:47:18 by analmeid         ###   ########.fr       */
+/*   Updated: 2024/05/18 15:16:20 by analmeid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		return (NULL);
 	ft_bzero(tmp, (nmemb * size));
 	return (tmp);
-	// tmp  = ft_memset(tmp, 0, (nmemb * size));
 }
 
 /*The calloc function allocates memory for an array of nmemb elements
