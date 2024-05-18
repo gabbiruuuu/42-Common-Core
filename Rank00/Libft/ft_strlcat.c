@@ -6,7 +6,7 @@
 /*   By: analmeid <analmeid@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 12:06:13 by analmeid          #+#    #+#             */
-/*   Updated: 2024/05/18 12:34:50 by analmeid         ###   ########.fr       */
+/*   Updated: 2024/05/18 15:36:20 by analmeid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	slen;
 	size_t	dlen;
 
+	if (src == NULL && size == 0)
+		return (0);
 	i = 0;
 	j = 0;
 	slen = ft_strlen(src);

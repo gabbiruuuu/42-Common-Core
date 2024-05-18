@@ -6,7 +6,7 @@
 /*   By: analmeid <analmeid@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 12:06:24 by analmeid          #+#    #+#             */
-/*   Updated: 2024/05/18 15:09:51 by analmeid         ###   ########.fr       */
+/*   Updated: 2024/05/18 15:29:40 by analmeid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		while (((char *)big)[i + j] == (((char *)little)[j]) && i + j < len)
 		{
 			if ((((char *)little)[j + 1]) == '\0')
-				return ((char *)big + i);
+				return (((char *)big) + i);
 			j++;
 		}
 		i++;
