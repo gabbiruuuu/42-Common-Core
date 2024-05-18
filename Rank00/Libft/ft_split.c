@@ -6,7 +6,7 @@
 /*   By: analmeid <analmeid@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 15:10:26 by analmeid          #+#    #+#             */
-/*   Updated: 2024/04/24 15:46:10 by analmeid         ###   ########.fr       */
+/*   Updated: 2024/05/18 11:09:37 by analmeid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,7 +132,7 @@ Allocates (with malloc(3)) and returns an array
 The array must end with a NULL pointer.
 */
 
-int	main(void)
+/* int	main(void)
 {
 	char	**dest;
 	char	*s;
@@ -149,4 +149,4 @@ int	main(void)
 		i++;
 	}
 	free(dest);
-}
+} */

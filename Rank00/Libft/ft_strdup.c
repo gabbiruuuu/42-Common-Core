@@ -6,7 +6,7 @@
 /*   By: analmeid <analmeid@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 12:06:10 by analmeid          #+#    #+#             */
-/*   Updated: 2024/04/19 12:25:35 by analmeid         ###   ########.fr       */
+/*   Updated: 2024/05/18 12:48:33 by analmeid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_strdup(const char *s)
 	i = 0;
 	j = ft_strlen(s) + 1;
 	str = (char *)malloc(sizeof(char) * j);
+	if (str == NULL)
+		return (NULL);
 	while (s[i])
 	{
 		str[i] = s[i];
@@ -32,6 +34,6 @@ char	*ft_strdup(const char *s)
 }
 
 /*
-The strdup() function returns a pointer to a
+The	strdup(void) function returns a pointer to a
 new string which is a duplicate of the string s.
 */

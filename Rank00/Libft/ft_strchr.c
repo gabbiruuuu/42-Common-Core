@@ -6,7 +6,7 @@
 /*   By: analmeid <analmeid@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 12:06:08 by analmeid          #+#    #+#             */
-/*   Updated: 2024/04/19 12:28:49 by analmeid         ###   ########.fr       */
+/*   Updated: 2024/05/18 11:22:45 by analmeid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strchr(const char *s, int c)
 	j = ft_strlen(s);
 	while (i <= j)
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 			return ((char *)&s[i]);
 		i++;
 	}

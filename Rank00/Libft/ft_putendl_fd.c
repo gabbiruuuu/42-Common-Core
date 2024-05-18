@@ -6,7 +6,7 @@
 /*   By: analmeid <analmeid@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 17:20:30 by analmeid          #+#    #+#             */
-/*   Updated: 2024/04/24 17:26:37 by analmeid         ###   ########.fr       */
+/*   Updated: 2024/05/18 12:55:20 by analmeid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
+	if(!s)
+		return;
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }

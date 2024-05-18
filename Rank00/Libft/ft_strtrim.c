@@ -6,7 +6,7 @@
 /*   By: analmeid <analmeid@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 14:53:23 by analmeid          #+#    #+#             */
-/*   Updated: 2024/04/23 14:19:08 by analmeid         ###   ########.fr       */
+/*   Updated: 2024/05/18 13:00:14 by analmeid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	j = ft_strlen(s1);
-	str = NULL;
 	if (s1[i] && set[i])
 	{
 		while (s1[i] && ft_strchr(set, s1[i]) != NULL)
@@ -28,11 +27,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 		while (j > i && s1[j - 1] && ft_strchr(set, s1[j - 1]) != NULL)
 			j--;
 		str = (char *)malloc(sizeof(char) * j - i + 1);
-		if (str == NULL)
+		if (!str)
 			return (NULL);
 		if (str)
 			ft_strlcpy(str, &s1[i], j - i + 1);
 	}
+	else
+		str = ft_strdup(s1);
 	return (str);
 }
 
