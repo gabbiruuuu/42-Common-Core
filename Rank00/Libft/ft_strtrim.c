@@ -6,11 +6,12 @@
 /*   By: analmeid <analmeid@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 14:53:23 by analmeid          #+#    #+#             */
-/*   Updated: 2024/06/18 12:35:19 by analmeid         ###   ########.fr       */
+/*   Updated: 2024/06/18 15:12:23 by analmeid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -49,7 +50,7 @@ Allocates (with malloc(3)) and returns a copy of ’s1’ with the characters
 
 /* int	main(void)
 {
-	char	s1[] = "lorem \n ipsum \t dolor \n sit \t amet";
+	char	s1[] = "lorem \n ipsum \t dolor \n sit \t arm";
 
-	printf("%s", ft_strtrim(s1, " "));
+	printf("%s", ft_strtrim(s1, "lorme"));
 } */
