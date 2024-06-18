@@ -6,13 +6,13 @@
 /*   By: analmeid <analmeid@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 12:04:29 by analmeid          #+#    #+#             */
-/*   Updated: 2024/04/10 12:43:09 by analmeid         ###   ########.fr       */
+/*   Updated: 2024/06/18 12:50:51 by analmeid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// convert a string to an integer
+// convert a string to an integer -+234
 int	ft_atoi(const char *str)
 {
 	int	i;

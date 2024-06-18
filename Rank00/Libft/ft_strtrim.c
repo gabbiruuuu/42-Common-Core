@@ -6,7 +6,7 @@
 /*   By: analmeid <analmeid@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 14:53:23 by analmeid          #+#    #+#             */
-/*   Updated: 2024/05/18 15:12:02 by analmeid         ###   ########.fr       */
+/*   Updated: 2024/06/18 12:35:19 by analmeid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,22 +18,22 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	j;
 	char	*str;
 
+	str = NULL;
 	i = 0;
+	if (!s1)
+		return (NULL);
+	if (!set)
+		return (ft_strdup(s1));
 	j = ft_strlen(s1);
-	if (s1[i] && set[i])
-	{
-		while (s1[i] && ft_strchr(set, s1[i]) != NULL)
-			i++;
-		while (j > i && s1[j - 1] && ft_strchr(set, s1[j - 1]) != NULL)
-			j--;
-		str = (char *)malloc(sizeof(char) * j - i + 1);
-		if (!str)
-			return (NULL);
-		if (str)
-			ft_strlcpy(str, &s1[i], j - i + 1);
-	}
-	else
-		str = ft_strdup(s1);
+	while (s1[i] && ft_strchr(set, s1[i]) != NULL)
+		i++;
+	while (j > i && s1[j - 1] && ft_strchr(set, s1[j - 1]) != NULL)
+		j--;
+	str = (char *)malloc(sizeof(char) * j - i + 1);
+	if (!str)
+		return (NULL);
+	if (str)
+		ft_strlcpy(str, &s1[i], j - i + 1);
 	return (str);
 }
 

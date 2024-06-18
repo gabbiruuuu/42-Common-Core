@@ -6,7 +6,7 @@
 /*   By: analmeid <analmeid@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 12:04:54 by analmeid          #+#    #+#             */
-/*   Updated: 2024/05/18 15:16:20 by analmeid         ###   ########.fr       */
+/*   Updated: 2024/06/18 12:32:38 by analmeid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,13 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*tmp;
+	size_t	value;
 
+	value = nmemb * size;
+	if (value && (value / size) != nmemb)
+		return (NULL);
 	tmp = (void *)malloc(nmemb * size);
-	if (!tmp)
+	if (!(tmp))
 		return (NULL);
 	ft_bzero(tmp, (nmemb * size));
 	return (tmp);

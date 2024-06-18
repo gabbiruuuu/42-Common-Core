@@ -6,7 +6,7 @@
 /*   By: analmeid <analmeid@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 15:10:26 by analmeid          #+#    #+#             */
-/*   Updated: 2024/05/18 15:17:25 by analmeid         ###   ########.fr       */
+/*   Updated: 2024/06/18 13:23:12 by analmeid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,18 +66,14 @@ static char	*ft_strldup(const char *str, int start, int end)
 	return (result);
 }
 
-static char	**ft_allocate_copy(const char *s, char c, int j)
+static char	**ft_allocate_copy(const char *s, char c, int j, char **str)
 {
-	int		start;
-	int		end;
-	char	**str;
-	int		i;
+	int	start;
+	int	end;
+	int	i;
 
 	i = 0;
 	start = 0;
-	str = (char **)malloc(sizeof(char *) * (j + 1));
-	if (str == NULL)
-		return (NULL);
 	while (s[start] && s[start] == c)
 		start++;
 	while (i < j)
@@ -86,6 +82,8 @@ static char	**ft_allocate_copy(const char *s, char c, int j)
 		while (s[end] && s[end] != c)
 			end++;
 		str[i] = ft_strldup(s, start, end);
+		if (!str[i])
+			return (ft_free(str), NULL);
 		start = end;
 		while (s[start] && s[start] == c)
 			start++;
@@ -99,22 +97,14 @@ char	**ft_split(const char *s, char c)
 {
 	char	**str;
 	int		j;
-	int		i;
 
 	if (s == NULL)
 		return (NULL);
 	j = ft_wordcount(s, c);
-	str = ft_allocate_copy(s, c, j);
-	i = 0;
-	while (i < j)
-	{
-		if (str[i] == NULL)
-		{
-			ft_free(str);
-			return (NULL);
-		}
-		i++;
-	}
+	str = (char **)malloc(sizeof(char *) * (j + 1));
+	if (str == NULL)
+		return (NULL);
+	str = ft_allocate_copy(s, c, j, str);
 	return (str);
 }
 

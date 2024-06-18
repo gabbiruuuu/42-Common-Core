@@ -6,7 +6,7 @@
 #    By: analmeid <analmeid@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/10 14:45:10 by analmeid          #+#    #+#              #
-#    Updated: 2024/05/18 15:32:43 by analmeid         ###   ########.fr        #
+#    Updated: 2024/06/18 12:45:42 by analmeid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,14 +63,9 @@ $(NAME):
 	$(Compiler) $(CmpFlags) -c $(CFILES) -I./
 	ar -rc $(OUTN) $(OFILES)
 
-so:
-	$(Compiler) -nostartfiles -fPIC $(CmpFlags) $(CFILES)
-	gcc -nostartfiles -shared -o libft.so $(OFILES)
-
 all: $(NAME)
 
 clean:
-	rm -f $(NAME)
 	rm -f $(OFILES)
 
 fclean: clean
