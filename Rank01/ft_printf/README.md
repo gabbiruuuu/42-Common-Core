@@ -17,7 +17,8 @@ A partial reimplementation of the printf in C. Handles only the following conver
 
 You have to recode the printf() function from libc.
 
-The prototype of ft_printf() is:	int ft_printf(const char *, ...);
+The prototype of ft_printf() is:
+	int ft_printf(const char *, ...);
 
 Here are the requirements:
 
@@ -25,5 +26,5 @@ Here are the requirements:
 	• Your function has to handle the following conversions: cspdiuxX%
 	• Your function will be compared against the original printf().
 	• You must use the command ar to create your library.
-		Using the libtool command is forbidden.
+	  Using the libtool command is forbidden.
 	• Your libftprintf.a has to be created at the root of your repository.
