@@ -15,9 +15,9 @@ A partial reimplementation of the printf in C. Handles only the following conver
 | %X         | Print a number in hexadecimal (base 16), with uppercase.                                      |
 | %%         | Print a percent sign.                                                                         |
 
-You have to recode the printf() function from libc.
 
 The prototype of ft_printf() is:
+
 	int ft_printf(const char *, ...);
 
 Here are the requirements:
