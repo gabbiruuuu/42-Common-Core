@@ -17,7 +17,7 @@ A partial reimplementation of the printf in C. Handles only the following conver
 
 You have to recode the printf() function from libc.
 
-The prototype of ft_printf() is:int ft_printf(const char *, ...);
+The prototype of ft_printf() is:	int ft_printf(const char *, ...);
 
 Here are the requirements:
 
